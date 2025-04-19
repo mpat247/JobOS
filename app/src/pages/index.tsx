@@ -1,7 +1,33 @@
-export default function HomePage() {
+"use client";
+
+import { useEffect, useState } from "react";
+import Header from "@/components/Layout/Header";
+import Hero from "@/components/Landing/Hero";
+import Features from "@/components/Landing/Features";
+import { supabase } from "@/lib/supabaseBrowser";
+
+export default function LandingPage() {
+  const [session, setSession] = useState<any>(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
   return (
-    <main className="flex h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold">Hello World from JobOS</h1>
-    </main>
+    <div className="min-h-screen bg-gray-100">
+      <Header session={session} />
+      <Hero />
+      <Features />
+    </div>
   );
 }

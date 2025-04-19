@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-caribbean-50: #eafff6;
+  --color-caribbean-100: #cdfee7;
+  --color-caribbean-200: #a0fad4;
+  --color-caribbean-300: #63f2be;
+  --color-caribbean-400: #25e2a3;
+  --color-caribbean-500: #00cd90;
+  --color-caribbean-600: #00a474;
+  --color-caribbean-700: #008360;
+  --color-caribbean-800: #00674d;
+  --color-caribbean-900: #005541;
+  --color-caribbean-950: #003026;
+}

@@ -1,0 +1,58 @@
+{"level":"info","message":"Initializing DDGS with options","timeout":10000,"timestamp":"2025-04-18T22:06:54.567Z","verify":true}
+{"backend":"auto","keywords":"Shopify careers site Canada","level":"info","maxResults":50,"message":"Starting text search","region":"wt-wt","safesearch":"moderate","timelimit":null,"timestamp":"2025-04-18T22:06:54.569Z"}
+{"keywords":"Shopify careers site Canada","level":"info","maxResults":50,"message":"Starting HTML search","region":"wt-wt","timelimit":null,"timestamp":"2025-04-18T22:06:54.570Z"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:06:54.570Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:06:55.462Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:06:56.818Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:06:58.085Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:06:59.301Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Reached maximum results limit","resultCount":50,"timestamp":"2025-04-18T22:07:00.581Z"}
+{"backend":"html","level":"info","message":"Search completed successfully","resultCount":50,"timestamp":"2025-04-18T22:07:00.581Z"}
+{"level":"info","message":"Initializing DDGS with options","timeout":10000,"timestamp":"2025-04-18T22:08:43.990Z","verify":true}
+{"backend":"auto","keywords":"RBC careers site Canada","level":"info","maxResults":50,"message":"Starting text search","region":"wt-wt","safesearch":"moderate","timelimit":null,"timestamp":"2025-04-18T22:08:43.993Z"}
+{"keywords":"RBC careers site Canada","level":"info","maxResults":50,"message":"Starting HTML search","region":"wt-wt","timelimit":null,"timestamp":"2025-04-18T22:08:43.993Z"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:08:43.993Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:08:44.945Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:08:46.236Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:08:47.538Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:08:48.852Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Reached maximum results limit","resultCount":50,"timestamp":"2025-04-18T22:08:50.119Z"}
+{"backend":"html","level":"info","message":"Search completed successfully","resultCount":50,"timestamp":"2025-04-18T22:08:50.119Z"}
+{"level":"info","message":"Initializing DDGS with options","timeout":10000,"timestamp":"2025-04-18T22:09:46.167Z","verify":true}
+{"backend":"auto","keywords":"RBC careers site Canada list of jobs","level":"info","maxResults":50,"message":"Starting text search","region":"wt-wt","safesearch":"moderate","timelimit":null,"timestamp":"2025-04-18T22:09:46.170Z"}
+{"keywords":"RBC careers site Canada list of jobs","level":"info","maxResults":50,"message":"Starting HTML lite search","region":"wt-wt","timelimit":null,"timestamp":"2025-04-18T22:09:46.170Z"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:09:46.171Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:09:47.369Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:09:48.659Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:09:50.024Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:09:51.310Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Reached maximum results limit","resultCount":50,"timestamp":"2025-04-18T22:09:52.634Z"}
+{"backend":"lite","level":"info","message":"Search completed successfully","resultCount":50,"timestamp":"2025-04-18T22:09:52.634Z"}
+{"level":"info","message":"Initializing DDGS with options","timeout":10000,"timestamp":"2025-04-18T22:10:11.886Z","verify":true}
+{"backend":"auto","keywords":"RBC careers site Canada list of jobs search","level":"info","maxResults":50,"message":"Starting text search","region":"wt-wt","safesearch":"moderate","timelimit":null,"timestamp":"2025-04-18T22:10:11.889Z"}
+{"keywords":"RBC careers site Canada list of jobs search","level":"info","maxResults":50,"message":"Starting HTML search","region":"wt-wt","timelimit":null,"timestamp":"2025-04-18T22:10:11.889Z"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:10:11.890Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:10:12.941Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:10:14.354Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:10:15.678Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Reached maximum results limit","resultCount":50,"timestamp":"2025-04-18T22:10:16.998Z"}
+{"backend":"html","level":"info","message":"Search completed successfully","resultCount":50,"timestamp":"2025-04-18T22:10:16.998Z"}
+{"level":"info","message":"Initializing DDGS with options","timeout":10000,"timestamp":"2025-04-18T22:11:09.258Z","verify":true}
+{"backend":"auto","keywords":"RBC Canada job search site list","level":"info","maxResults":50,"message":"Starting text search","region":"wt-wt","safesearch":"moderate","timelimit":null,"timestamp":"2025-04-18T22:11:09.261Z"}
+{"keywords":"RBC Canada job search site list","level":"info","maxResults":50,"message":"Starting HTML lite search","region":"wt-wt","timelimit":null,"timestamp":"2025-04-18T22:11:09.261Z"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:09.261Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:10.239Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:11.647Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:13.124Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:14.487Z","url":"https://lite.duckduckgo.com/lite"}
+{"level":"info","message":"Reached maximum results limit","resultCount":50,"timestamp":"2025-04-18T22:11:15.842Z"}
+{"backend":"lite","level":"info","message":"Search completed successfully","resultCount":50,"timestamp":"2025-04-18T22:11:15.842Z"}
+{"level":"info","message":"Initializing DDGS with options","timeout":10000,"timestamp":"2025-04-18T22:11:44.980Z","verify":true}
+{"backend":"auto","keywords":"RBC careers search site job list","level":"info","maxResults":50,"message":"Starting text search","region":"wt-wt","safesearch":"moderate","timelimit":null,"timestamp":"2025-04-18T22:11:44.983Z"}
+{"keywords":"RBC careers search site job list","level":"info","maxResults":50,"message":"Starting HTML search","region":"wt-wt","timelimit":null,"timestamp":"2025-04-18T22:11:44.983Z"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:44.984Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:45.962Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:47.346Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Making request","method":"POST","timestamp":"2025-04-18T22:11:48.696Z","url":"https://html.duckduckgo.com/html"}
+{"level":"info","message":"Reached maximum results limit","resultCount":50,"timestamp":"2025-04-18T22:11:50.108Z"}
+{"backend":"html","level":"info","message":"Search completed successfully","resultCount":50,"timestamp":"2025-04-18T22:11:50.108Z"}
