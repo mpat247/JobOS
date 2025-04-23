@@ -14,11 +14,11 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
-    "@phukon/duckduckgo-search": "^1.1.0",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/auth-helpers-react": "^0.5.0",
     "@supabase/ssr": "^0.6.1",
     "dotenv": "^16.5.0",
+    "jobos": "file:",
     "next": "^15.3.0",
     "next-auth": "^4.24.11",
     "react": "^19.1.0",

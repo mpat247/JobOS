@@ -1,86 +1,76 @@
-// Path: app/src/designtests/discoverCareerPage.mts
-
+// File: discoverCareerPage.mts
 import { chromium } from "playwright";
 
-type SearchResult = {
-  title: string;
-  url: string;
-};
-
-const [company_name, country = ""] = process.argv.slice(2);
+const [company_name] = process.argv.slice(2);
 if (!company_name) {
   console.error(
-    "Usage: node --loader ts-node/esm discoverCareerPage.mts <company> [country]"
+    "❌ Usage: node --loader ts-node/esm discoverCareerPage.mts <company>"
   );
   process.exit(1);
 }
 
-async function searchGoogle(
-  query: string,
-  limit = 10
-): Promise<SearchResult[]> {
-  const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({
-    userAgent:
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/123 Safari/537.36",
-    locale: "en-CA",
-  });
-  const page = await context.newPage();
-
-  try {
-    const encoded_query = encodeURIComponent(query);
-    const url = `https://www.google.com/search?q=${encoded_query}&num=${limit}&hl=en&gl=CA`;
-
-    // go directly to the SERP and wait for network idle
-    await page.goto(url, { waitUntil: "networkidle" });
-
-    // grab every <h3> and its nearest <a>
-    const results = await page.$$eval(
-      "h3",
-      (heads, max) =>
-        (heads as HTMLElement[])
-          .map((h) => {
-            const link = h.closest("a");
-            return link
-              ? {
-                  title: h.innerText.trim(),
-                  url: (link as HTMLAnchorElement).href,
-                }
-              : null;
-          })
-          .filter((r) => r !== null)
-          .slice(0, max as number),
-      limit
-    );
-
-    return results as SearchResult[];
-  } finally {
-    await browser.close();
-  }
+function getDomainFromCompany(company: string): string {
+  return `${company.toLowerCase().replace(/\s+/g, "")}.com`;
 }
 
-export async function findCareerPages(company: string, location = "") {
-  const query = `${company} careers site ${location} job openings`.trim();
-  console.log(`🔎 Running search: "${query}"\n`);
+async function discoverJobListings(companyName: string) {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage();
 
-  const results = await searchGoogle(query, 15);
+  const companyDomain = getDomainFromCompany(companyName);
+  const searchQuery = `site:${companyDomain} careers jobs`;
+  const encodedQuery = encodeURIComponent(searchQuery);
+  const searchUrl = `https://www.google.com/search?q=${encodedQuery}&num=10&hl=en`;
 
-  const career_sites = results
-    .filter(
-      ({ title, url }) =>
-        /(careers|jobs|work|join|vacancies)/i.test(title) ||
-        /(careers|jobs)/i.test(url)
-    )
-    .slice(0, 5);
+  console.log(`\n🔍 Starting search for: "${companyName}"`);
+  console.log(`🌐 Domain assumed: ${companyDomain}`);
+  console.log(`🔎 Google query: ${searchQuery}`);
+  console.log(`🔗 Search URL: ${searchUrl}`);
 
-  if (career_sites.length === 0) {
-    console.warn("⚠️  No relevant career pages found.");
+  await page.goto(searchUrl, { waitUntil: "domcontentloaded" });
+
+  const hrefs = await page.$$eval(
+    "a",
+    (anchors, domain) =>
+      anchors
+        .map((a) => a.href)
+        .filter(
+          (href) =>
+            href.includes(domain) &&
+            /careers|jobs|positions|openings/i.test(href)
+        ),
+    companyDomain
+  );
+
+  if (hrefs.length === 0) {
+    console.log("\n⚠️ No relevant career links found.");
+    await browser.close();
     return;
   }
 
-  career_sites.forEach(({ title, url }, i) => {
-    console.log(`${i + 1}. ${title}\n   ${url}\n`);
+  console.log(`\n🔗 Career-related URLs found:`);
+  hrefs.forEach((url, index) => {
+    console.log(`${index + 1}. ${url}`);
   });
+
+  const chosenUrl = hrefs[0];
+  console.log(`\n✅ Chosen URL to follow: ${chosenUrl}`);
+
+  await page.goto(chosenUrl, { waitUntil: "domcontentloaded" });
+
+  console.log(`📄 Loaded chosen page. URL: ${page.url()}`);
+  const pageTitle = await page.title();
+  console.log(`🧾 Page Title: ${pageTitle}`);
+
+  // optional: show how many <a>, <div>, etc. on page
+  const numLinks = await page.$$eval("a", (els) => els.length);
+  const numDivs = await page.$$eval("div", (els) => els.length);
+  console.log(`📊 Page Stats: ${numLinks} <a> tags | ${numDivs} <div> tags`);
+
+  await browser.close();
+  console.log(
+    "\n✅ Done. You can now proceed to extract job listings from this page."
+  );
 }
 
-findCareerPages(company_name, country);
+discoverJobListings(company_name);
