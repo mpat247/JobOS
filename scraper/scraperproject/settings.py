@@ -25,7 +25,15 @@ SECRET_KEY = 'django-insecure-gkjzdo&2jnsb32=8m22kogy+6w8vnh8lln)wtc2mp^(j@ucdpt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "nxgpymnqnd.us-east-1.awsapprunner.com",  # App Runner default domain
+    "api.jobos.tech",                         # Your custom domain
+    "jobos.tech",                             # Your custom domain
+    "www.jobos.tech",                         # Your custom domain
+    
+]
 
 
 # Application definition

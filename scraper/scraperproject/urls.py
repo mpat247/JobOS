@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include  # ✅ include is required here
+from discovery.views import healthCheckView  # ✅ import your view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/discover/', include('discovery.urls')),  # ✅ connects your view
+    path("", healthCheckView),  # 👈 health check root path
+
 ]
 
