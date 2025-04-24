@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  nextjs:
+    build: ./app
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - ./app:/app
+    env_file:
+      - ./app/.env.local
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - django
+
+  django:
+    build: ./scraper
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./scraper:/app
+    env_file:
+      - ./scraper/.env
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - django
+      - nextjs
+    command: /bin/sh -c "sleep 5 && nginx -g 'daemon off;'"

@@ -3,3 +3,5 @@ app/node_modules
 app/.next
 scraper/jobos-venv
 .vscode
+app/.env.local
+scraper/.env

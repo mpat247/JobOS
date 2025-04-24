@@ -1,16 +1,12 @@
-# Web framework
 Django>=4.2,<5.0
 djangorestframework>=3.14.0
 
-# Search engine queries
 duckduckgo-search>=2.5.3
 
-# JavaScript rendering
 playwright>=1.42.0
 
 # CLI + Parsing + HTTP
 pydantic>=2.3.0
 httpx>=0.25.0
 
-# Optional LLM support (later phases)
 requests>=2.31.0
