@@ -1,6 +1,9 @@
+# scraper/discovery/urls.py
+
 from django.urls import path
-from .views import discover_view
+from .views import add_company
 
 urlpatterns = [
-    path('', discover_view),
+    # POST /api/discover/  → add_company
+    path('', add_company, name='add_company'),
 ]

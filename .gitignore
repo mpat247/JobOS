@@ -5,3 +5,4 @@ scraper/jobos-venv
 .vscode
 app/.env.local
 scraper/.env
+__pycache__
