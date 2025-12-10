@@ -19,7 +19,7 @@
     "@supabase/ssr": "^0.6.1",
     "dotenv": "^16.5.0",
     "jobos": "file:",
-    "next": "^15.3.0",
+    "next": "^15.5.7",
     "next-auth": "^4.24.11",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
